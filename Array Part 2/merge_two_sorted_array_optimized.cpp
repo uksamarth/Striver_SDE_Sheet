@@ -14,10 +14,10 @@ void merge_two_sorted_arr(long long arr1[], long long arr2[], int n, int m){
         else if(arr1[left]<=arr2[right]){
             break;
         }
+
+    }
         sort(arr1,arr1+n);
         sort(arr2,arr2+m);
-    }
-
 }
 
 int main(){
