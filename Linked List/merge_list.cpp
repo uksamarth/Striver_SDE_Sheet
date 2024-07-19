@@ -12,14 +12,31 @@ class Node {
         }
 };
 
+Node* convertArrToLinkedList(vector<int>& arr){
+    Node* dummynode = new Node(-1);
+    Node* temp = dummynode;
+    for(int i=0;i<arr.size();i++){
+        temp->next = new Node(arr[i]);
+        temp = temp->next;
+    }
+    return dummynode->next;
+}
+
 Node* sortTwoLinkedLists(Node* list1, Node* list2){
     vector<int> arr;
     Node* temp1 = list1;
     Node* temp2 = list2;
     while(temp1!= nullptr){
         arr.push_back(temp1->data);
-        temp = temp->next;
+        temp1 = temp1->next;
     }
+    while(temp2!=nullptr){
+        arr.push_back(temp2->data);
+        temp2 = temp2->next;
+    }
+    sort(arr.begin(),arr.end());
+    Node* head = convertArrToLinkedList(arr);
+    return head;
 }
 
 void printLinkedList(Node* head){
