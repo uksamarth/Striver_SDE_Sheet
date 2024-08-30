@@ -1,7 +1,6 @@
 #include<stdio.h>
 
 int hcf(int arr[],int n){
-
     int gcd(int a, int b) {
         while (b != 0) {
             int temp = b;
@@ -23,4 +22,10 @@ int main(){
     int res = hcf(arr,n);
     printf("%d",res);
     return 0;
+}
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<i+1;j++){
+        if()
+    }
 }

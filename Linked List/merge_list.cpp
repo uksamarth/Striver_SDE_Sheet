@@ -19,7 +19,7 @@ Node* convertArrToLinkedList(vector<int>& arr){
         temp->next = new Node(arr[i]);
         temp = temp->next;
     }
-    return dummynode->next;
+    return dummynode->next; 
 }
 
 Node* sortTwoLinkedLists(Node* list1, Node* list2){
